@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>contact us</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:500|Poppins:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./vendor/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/acr-main.css">
+</head>
+
+<body>
+    <header class="header section__primary">
+        <div class="section__fluid">
+            <div class="header__content">
+                <div class="logo">
+                    <a href="index.php">
+                        <img class="logo-icon" src="logo/icon.png">
+                        <h1>ActualCashRewards</h1>
+                    </a>
+                </div>
+                <div class="banner">
+
+                    <a href="#">
+                        <img src="../images/featured/thumb/mojave.jpg" alt="featured__image">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content section__fluid">
+        <main class="content__main">
+            <section class="nav section__primary">
+                <div class="menu-wrapper">
+                    <a href="#menu" class="menu-link"> Menu</a>
+
+                    <nav id="menu" role="navigation">
+                        <div class="menu">
+                            <li class="menu">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">how it works</a>
+                            </li>
+                            <li>
+                                <a href="#">add your reward</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">contact us</a>
+                            </li>
+                            </li>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- about us -->
+            <section class="about-us section__primary">
+                <div class="section__header">
+                    <svg>
+                        <use xlink:href="./icons/sprite.svg#acr-Advice">
+                        </use>
+                    </svg>
+
+                    <h4 class="section__header--title">about us</h4>
+                </div>
+
+                <div class="about-us__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                        repellendus tenetur placeat?
+                        Inventore, sit excepturi. Error dolorum natus tempora sequi voluptas. Sit
+                        animi laborum
+                        dignissimos delectus illo repudiandae quisquam aliquid.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, unde qui,
+                        quibusdam numquam
+                        explicabo saepe quas corporis nulla iste molestiae enim, nam distinctio hic
+                        non. Suscipit
+                        repudiandae totam consectetur reprehenderit.
+                    </p>
+                </div>
+            </section>
+
+            <!-- how it works -->
+            <section class="hw section__primary">
+                <div class="section__header">
+                    <svg>
+                        <use xlink:href="./icons/sprite.svg#acr-Process">
+                        </use>
+                    </svg>
+
+                    <h4 class="section__header--title">how it works</h4>
+                </div>
+
+                <div class="hw__content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                        repellendus tenetur placeat?
+                        Inventore, sit excepturi. Error dolorum natus tempora sequi voluptas. Sit
+                        animi laborum
+                        dignissimos delectus illo repudiandae quisquam aliquid.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, unde qui,
+                        quibusdam numquam
+                        explicabo saepe quas corporis nulla iste molestiae enim, nam distinctio hic
+                        non. Suscipit
+                        repudiandae totam consectetur reprehenderit.
+                    </p>
+                </div>
+            </section>
+
+            <!-- contact-form -->
+            <section class="contact__form section__primary">
+                <div id="contact-area">
+                    <div class="section__header">
+                        <svg>
+                            <use xlink:href="./icons/sprite.svg#acr-email1">
+                            </use>
+                        </svg>
+
+                        <h4 class="section__header--title">contact us & add your reward</h4>
+                    </div>
+
+                    <form method="post">
+                        <div class="checkbox">
+                            <input type="checkbox" id="reward-checkbox" name="reward-checkbox">
+                            <label for="reward-checkbox">
+                                Add your reward, Include all info, contact, location, amount of
+                                reward, website, email
+                                etc.
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <input type="checkbox" id="featured-reward-checkbox" name="featured-reward-checkbox">
+                            <label for="featured-reward-checkbox">
+                                Check this box for FEATURED rewards. Featured Rewards are $10/Month
+                                through paypal.
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label for="Name">Name:</label>
+                            <input type="text" name="name" id="Name" required />
+                        </div>
+                        <div class="field">
+                            <label for="Phone">Phone:</label>
+                            <input type="tel" name="phone" id="Phone" />
+                        </div>
+                        <div class="field">
+                            <label for="Email">Email:</label>
+                            <input type="email" name="email" id="Email" />
+                        </div>
+                        <div class="field">
+                            <label for="Website">Website:</label>
+                            <input type="text" name="website" id="Website" />
+                        </div>
+                        <div class="field">
+                            <label for="Subject">Subject:</label>
+                            <input type="text" name="subject" id="Subject" required />
+                        </div>
+                        <div class="field">
+                            <label for="image-file">File:</label>
+                            <input type="file" name="image-file" id="image-file" />
+                        </div>
+                        <div class="field">
+                            <label for="Message">Message:</label>
+                            <textarea name="message" rows="10" cols="20" id="Message" required></textarea>
+                        </div>
+                        <div class="field-submit">
+                            <input type="submit" name="submit" value="Submit" class="submit-button" />
+                        </div>
+                    </form>
+
+                    <div style="clear: both;"></div>
+                </div>
+            </section>
+        </main>
+        <aside class="content__sidebar section__primary">
+            <div class="add__box">
+                <a href="#">
+                    <img src="../images/featured/thumb/mojave.jpg" alt="featured__image">
+                </a>
+            </div>
+
+            <div class="add__box">
+                <a href="#">
+                    <img src="../images/featured/thumb/mojave.jpg" alt="featured__image">
+                </a>
+            </div>
+
+            <div class="add__box">
+                <a href="#">
+                    <img src="../images/featured/thumb/mojave.jpg" alt="featured__image">
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer section__primary">
+        <div class="footer__content">
+            <div class="footer__head">
+                <!-- <svg>
+                    <use xlink:href="/logo/icon.svg">
+                    </use>
+                </svg> -->
+                <img class="logo-icon" src="logo/icon.png" alt="" srcset="">
+                <h2>ActualCashRewards</h2>
+            </div>
+            <ul class="footer__social">
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="./icons/sprite.svg#acr-Facebook">
+                            </use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="./icons/sprite.svg#acr-Twitter">
+                            </use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="./icons/sprite.svg#acr-instagram">
+                            </use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="./icons/sprite.svg#acr-Linkdin">
+                            </use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copy">
+                <p><span>&#169;</span>Copyright ActualCashRewards 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- back-to-top -->
+    <a href="#content" class="back-to-top">Top</a>
+
+    <!-- popup -->
+    <div class="popup" role="alert">
+        <div class="popup-container">
+            <a href="#0" class="popup-close img-replace">Close</a>
+
+            <div class="popup__content">
+                <svg>
+                    <use xlink:href="./icons/sprite.svg#acr-email">
+                    </use>
+                </svg>
+
+                <h4>your information is sent.</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./vendor/lightbox/simple-lightbox.min.js"></script>
+    <script src="./vendor/slick/slick.min.js"></script>
+    <script src="./js/acr-main.js"></script>
+</body>
+
+</html>

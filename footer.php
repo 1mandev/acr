@@ -7,8 +7,7 @@
                     <use xlink:href="/logo/icon.svg">
                     </use>
                 </svg> -->
-                <img class="logo-icon" src="assets/logo/icon.png" alt="" srcset="">
-                <h2>Actual<span>Ca$h</span>Rewards</h2>
+                <img class="logo-icon" src="assets/logo/logo-1d.jpg">
             </div>
             <ul class="footer__social">
                 <li>
@@ -55,15 +54,13 @@
 
     <!-- script -->
     <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/vendor/lightbox/simple-lightbox.min.js"></script>
     <script src="assets/vendor/slick/slick.min.js"></script>
     <script src="assets/vendor/light/baguetteBox.min.js"></script>
     <script src="assets/js/acr-main.js"></script>
     <script>
-        var $gallery = $('.image a').simpleLightbox();
-    </script>
-    <script>
+        baguetteBox.run('.featured__slider');
         baguetteBox.run('.image__slider');
+        baguetteBox.run('.masonry-not-columns');
     </script>
 </body>
 

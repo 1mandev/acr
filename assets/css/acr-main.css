@@ -1,13 +1,13 @@
 :root {
   --color-main: #dddddd;
-  --color-accent: rgb(245, 204, 42);
+  --color-accent: #F9DC3A;
   --color-text: #263238;
   --padding-vertical: 0.3rem;
   --padding-vertical-bigscreen: 0.5rem;
   --padding-horizontal-bigscreen: 5rem;
   --padding-horizontal-mediumscreen: 2.5rem;
   --padding-horizontal-smallscreen: 1.5rem;
-  --font: 'Poppins', Arial, 'Helvetica Neue', sans-serif;
+  --font: 'IBM Plex Sans Condensed', sans-serif;
   --logo-font: 'Teko', cursive;
 }
 
@@ -30,7 +30,7 @@ body {
   font-family: var(--font);
   line-height: 1.5;
   color: var(--color-text);
-  background: linear-gradient(to right, #fff, rgba(245, 204, 42, 0.3));
+  background: linear-gradient(to right, #fff, #F9DC3A50);
 }
 
 a {
@@ -290,7 +290,8 @@ ul {
   position: relative;
   z-index: 10;
   text-transform: capitalize;
-  background: var(--color-main);
+  background: linear-gradient(to left bottom, #eee, #F9DC3A50);
+  border: 1.5px solid var(--color-accent);
 }
 .menu-wrapper .menu {
   margin: 0;
@@ -319,13 +320,13 @@ ul {
   margin: 0 2.2em;
   line-height: 1.3em;
   color: var(--color-text);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   white-space: nowrap;
   transition: all 0.4s linear;
   text-decoration: none;
-  border-bottom: 2px solid var(--color-text);
+  border-bottom: 1.5px solid var(--color-text);
 }
 .menu-wrapper a:hover {
   border-color: var(--color-accent);

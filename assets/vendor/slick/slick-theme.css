@@ -189,7 +189,8 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background: rgba(245, 204, 42, 0.9);
+  background: var(--color-text);
+  transition: all 0.3s linear;
   z-index: 100;
 }
 
@@ -199,7 +200,7 @@
 .slick-next:focus {
   color: transparent;
   outline: none;
-  background: rgb(245, 204, 42);
+  background: var(--color-accent);
 }
 
 .slick-prev {

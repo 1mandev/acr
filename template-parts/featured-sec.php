@@ -16,13 +16,10 @@
                             $full_img = "images/".$subdir."/"."full/".$image;
                             $thumb_img = "images/".$subdir."/"."thumb/".$image;
             ?>
-            <div>
-                <div class="image">
-                    <a href="<?php echo $full_img; ?>">
-                        <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>" title="<?php echo $image; ?>">
-                    </a>
-                </div>
-            </div>
+                <a href="<?php echo $full_img; ?>">
+                    <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>" title="<?php echo $image; ?>">
+                </a>
+
             <?php endforeach; endif; endforeach; ?>
         </div>
     </div>

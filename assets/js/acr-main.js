@@ -66,21 +66,21 @@ $('.back-to-top').click(function() {
     => load-more
 -----------------------------*/
 $(document).ready(function() {
-  $('.masonry-with-columns a')
-    .slice(15)
+  $('.masonry-not-columns a')
+    .slice(16)
     .hide();
 
-  let limit = 15;
-  if ($('.masonry-with-columns a:hidden').length != 0) {
+  let limit = 16;
+  if ($('.masonry-not-columns a:hidden').length != 0) {
     $('.loadmore__button').show();
   }
   $('.loadmore__button').on('click', function(e) {
     e.preventDefault();
     // limit += 5;
-    $('.masonry-with-columns a:hidden')
+    $('.masonry-not-columns a:hidden')
       .slice(0, limit)
       .slideDown();
-    if ($('.masonry-with-columns a:hidden').length == 0) {
+    if ($('.masonry-not-columns a:hidden').length == 0) {
       $('.loadmore__button').fadeOut('slow');
     }
   });

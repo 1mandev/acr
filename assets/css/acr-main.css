@@ -1,6 +1,6 @@
 :root {
   --color-main: #eee;
-  --color-accent: #F9DC3A;
+  --color-accent: #f9dc3a;
   --color-text: #263238;
   --padding-vertical: 0.3rem;
   --padding-vertical-bigscreen: 0.5rem;
@@ -30,7 +30,7 @@ body {
   font-family: var(--font);
   line-height: 1.5;
   color: var(--color-text);
-  background: linear-gradient(to right, #fff, #F9DC3A50);
+  background: linear-gradient(to right, #fff, #f9dc3a50);
 }
 
 a {
@@ -290,7 +290,7 @@ ul {
   position: relative;
   z-index: 10;
   text-transform: capitalize;
-  background: linear-gradient(to left bottom, #eee, #F9DC3A50);
+  background: linear-gradient(to left bottom, #eee, #f9dc3a50);
   border: 1.5px solid var(--color-accent);
 }
 .menu-wrapper .menu {
@@ -893,17 +893,21 @@ ul {
 /*---------------------------
     => contact-form
 -----------------------------*/
+.contact__form.section__primary {
+  padding: 1.25rem 0 0.5rem;
+}
+
 #contact-area {
   max-width: 700px;
   margin: 0 auto;
 }
 
 #contact-area .section__header {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 #contact-area form .checkbox:first-child {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .field {

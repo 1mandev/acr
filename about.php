@@ -110,6 +110,10 @@
                             <input type="text" name="subject" id="Subject" required />
                         </div>
                         <div class="field">
+                            <label for="image-file">File:</label>
+                            <input type="file" name="image-file" id="image-file" />
+                        </div>
+                        <div class="field">
                             <label for="Message">Message:</label>
                             <textarea name="message" rows="10" cols="20" id="Message" required></textarea>
                         </div>

@@ -21,7 +21,7 @@
             ?>
             
                 <a href="<?php echo $full_img; ?>">
-                    <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>" title="<?php echo $image; ?>">
+                    <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>">
                 </a>
            
                 <?php endforeach;?>

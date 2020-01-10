@@ -3,7 +3,7 @@
         <svg>
             <use xlink:href="assets/icons/sprite.svg#acr-Star"></use>
         </svg>
-        <h4 class="section__header--title">Featured/hot</h4>
+        <h4 class="section__header--title">Featured</h4>
     </div>
 
     <div class="slider__wrapper">
@@ -17,7 +17,7 @@
                             $thumb_img = "images/".$subdir."/"."thumb/".$image;
             ?>
                 <a href="<?php echo $full_img; ?>">
-                    <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>" title="<?php echo $image; ?>">
+                    <img src="<?php echo $thumb_img; ?>" alt="<?php echo $image; ?>">
                 </a>
 
             <?php endforeach; endif; endforeach; ?>

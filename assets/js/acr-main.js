@@ -9,6 +9,39 @@ $(document).ready(function() {
 });
 
 /*---------------------------
+    => bannner-add
+-----------------------------*/
+$(document).ready(function() {
+  $('.add-banner__form').hide();
+  $('.add-banner__block').hide();
+  $('.add-banner__button button').click(function() {
+    $('.add-banner__form').fadeIn('slow');
+    $('.add-banner__button button').fadeOut('slow');
+  });
+
+  $('.add-banner__form input[type="submit"]').click(function(e) {
+    e.preventDefault();
+
+    $('.add-banner__block').fadeIn('slow');
+    $('.add-banner__form').fadeOut('slow');
+  });
+
+  $('.banner__action--edit').click(function(e) {
+    e.preventDefault();
+
+    $('.add-banner__form').fadeIn('slow');
+    $('.add-banner__block').fadeOut('slow');
+  });
+
+  $('.banner__action--delete').click(function(e) {
+    e.preventDefault();
+
+    $('.add-banner__button button').fadeIn('slow');
+    $('.add-banner__block').fadeOut('slow');
+  });
+});
+
+/*---------------------------
     => navbar
 -----------------------------*/
 $(document).ready(function() {
@@ -44,6 +77,38 @@ $(document).ready(function() {
   };
   add_toggle_links();
   $(window).bind('resize', add_toggle_links);
+});
+
+/*---------------------------
+    => sidebar-add
+-----------------------------*/
+$(document).ready(function() {
+  $('.add-sidebar__form').hide();
+
+  $('.add-sidebar__button button').click(function() {
+    $('.add-sidebar__form').fadeIn('slow');
+  });
+
+  $('.add-sidebar__form input[type="submit"]').click(function(e) {
+    e.preventDefault();
+
+    var elementToPrepend = `
+      <div class="add-sidebar__block">
+        <div class="sidebar__action">
+          <a class="sidebar__action--edit" href="">Edit</a>
+          <a class="sidebar__action--delete" href="">Delete</a>
+        </div>
+        <div class="sidebar__image"></div>
+      </div>
+    `;
+
+    $(elementToPrepend)
+      .hide()
+      .prependTo('.content__sidebar')
+      .fadeIn('slow');
+
+    $('.add-sidebar__form').fadeOut('slow');
+  });
 });
 
 /*---------------------------

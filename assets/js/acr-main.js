@@ -82,6 +82,10 @@ $(document).ready(function() {
 /*---------------------------
     => sidebar-add
 -----------------------------*/
+function deleteBlock(id) {
+  $(`#sidebar-add${id}`).remove();
+}
+
 $(document).ready(function() {
   $('.add-sidebar__form').hide();
 
@@ -89,14 +93,15 @@ $(document).ready(function() {
     $('.add-sidebar__form').fadeIn('slow');
   });
 
+  var idCount = 1;
   $('.add-sidebar__form input[type="submit"]').click(function(e) {
     e.preventDefault();
 
     var elementToPrepend = `
-      <div class="add-sidebar__block">
+      <div class="add-sidebar__block" id="sidebar-add${idCount}">
         <div class="sidebar__action">
           <a class="sidebar__action--edit" href="#">Edit</a>
-          <a class="sidebar__action--delete" href="#">Delete</a>
+          <a class="sidebar__action--delete" onclick=deleteBlock(${idCount}) href="#">Delete</a>
         </div>
         <div class="sidebar__image"></div>
       </div>
@@ -108,16 +113,13 @@ $(document).ready(function() {
       .fadeIn('slow');
 
     $('.add-sidebar__form').fadeOut('slow');
+
+    idCount++;
   });
 
   $(document).on('click', '.sidebar__action--edit', function(e) {
     e.preventDefault();
     $('.add-sidebar__form').fadeIn('slow');
-  });
-
-  $(document).on('click', '.sidebar__action--delete', function(e) {
-    e.preventDefault();
-    $('.add-sidebar__block').remove();
   });
 });
 

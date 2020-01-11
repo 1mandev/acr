@@ -26,6 +26,13 @@ $(document).ready(function() {
     $('.add-banner__form').fadeOut('slow');
   });
 
+  $('.add-banner__form input[type="button"]').click(function(e) {
+    e.preventDefault();
+
+    $('.add-banner__form').fadeOut('slow');
+    $('.add-banner__button button').fadeIn('slow');
+  });
+
   $('.banner__action--edit').click(function(e) {
     e.preventDefault();
 

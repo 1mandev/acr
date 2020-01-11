@@ -4,7 +4,7 @@
   --color-text: #263238;
   --padding-vertical: 0.45rem;
   --padding-vertical-bigscreen: 0.35rem;
-  --padding-horizontal-bigscreen: 0.50rem;
+  --padding-horizontal-bigscreen: 0.5rem;
   --padding-horizontal-mediumscreen: 2.5rem;
   --padding-horizontal-smallscreen: 1.5rem;
   --font: 'IBM Plex Sans Condensed', sans-serif;
@@ -162,15 +162,6 @@ ul {
   align-items: center;
 }
 
-.logo a {
-  display: flex;
-  align-items: center;
-}
-
-.logo h1 span {
-  color: var(--color-accent);
-}
-
 .logo-icon {
   width: 120px;
 }
@@ -220,7 +211,8 @@ ul {
   padding: 8px 10px;
 }
 
-.add-banner__form input[type='submit'] {
+.add-banner__form input[type='submit'],
+.add-banner__form input[type='button'] {
   width: 15%;
   flex-shrink: 0;
   padding: 7px 20px;
@@ -249,27 +241,49 @@ ul {
   flex-shrink: 0;
 }
 
-@media (max-width: 1100px) {
-  .banner a {
-    width: calc(468px * 1);
-    height: calc(60px * 1.5);
+@media (max-width: 1000px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 650px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 650px;
+  }
+
+  .banner .banner__image {
+    width: 650px;
+    height: 90px;
   }
 }
 
-@media (max-width: 900px) {
-  .banner a {
-    width: calc(468px * 1);
-    height: calc(60px * 1);
+@media (max-width: 885px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 576px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 576px;
+  }
+
+  .banner .banner__image {
+    width: 576px;
+    height: 90px;
   }
 }
 
 @media (max-width: 800px) {
   .logo {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .header.section__primary {
-    padding: 0.5rem 0 1rem;
+    padding: 0.5rem 0 0.4rem;
   }
 
   .header__content {
@@ -278,27 +292,83 @@ ul {
     flex-direction: column;
     align-items: center;
   }
+}
 
-  .banner a {
-    width: calc(468px * 0.95);
-    height: calc(60px * 0.95);
+@media (max-width: 650px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 450px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 450px;
+  }
+
+  .add-banner__form input[type='submit'],
+  .add-banner__form input[type='button'] {
+    width: 18%;
+    flex-shrink: 0;
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+
+  .banner .banner__image {
+    width: 450px;
+    height: 90px;
   }
 }
 
-@media (max-width: 570px) {
-  .banner a {
-    width: calc(468px * 0.85);
-    height: calc(60px * 0.85);
+@media (max-width: 540px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 380px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 380px;
+  }
+
+  .add-banner__form input[type='submit'],
+  .add-banner__form input[type='button'] {
+    width: 19%;
+    flex-shrink: 0;
+    padding: 7px 15px;
+    font-size: 11px;
+  }
+
+  .banner .banner__image {
+    width: 380px;
+    height: 90px;
   }
 }
 
-@media (max-width: 420px) {
-  .banner a {
-    width: calc(468px * 0.75);
-    height: calc(60px * 0.75);
+@media (max-width: 460px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 300px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 300px;
+  }
+
+  .add-banner__form input[type='submit'],
+  .add-banner__form input[type='button'] {
+    width: 23%;
+    font-size: 10px;
+  }
+
+  .banner .banner__image {
+    width: 300px;
+    height: 90px;
   }
 }
-
 /*---------------------------
     => content-main
 -----------------------------*/
@@ -688,7 +758,6 @@ ul {
 .masonry-not-columns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .masonry-not-columns a {

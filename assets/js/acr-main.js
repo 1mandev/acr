@@ -60,10 +60,6 @@ $(document).ready(function() {
 /*---------------------------
     => sidebar-add
 -----------------------------*/
-function deleteBlock(id) {
-  $(`#sidebar-add${id}`).remove();
-}
-
 $(document).ready(function() {
   $('.add-sidebar__form').hide();
 
@@ -71,17 +67,18 @@ $(document).ready(function() {
     $('.add-sidebar__form').fadeIn('slow');
   });
 
-  var idCount = 1;
-  $('.add-sidebar__form input[type="submit"]').click(function(e) {
+  $('form.add-sidebar__form').submit(function(e) {
     e.preventDefault();
-
+    var addTextValue = $('.add-sidebar__form textarea').val();
     var elementToPrepend = `
-      <div class="add-sidebar__block" id="sidebar-add${idCount}">
+      <div class="add-sidebar__block" data-name=${addTextValue}>
         <div class="sidebar__action">
           <a class="sidebar__action--edit" href="#">Edit</a>
-          <a class="sidebar__action--delete" onclick=deleteBlock(${idCount}) href="#">Delete</a>
+          <a class="sidebar__action--delete" href="#">Delete</a>
         </div>
-        <div class="sidebar__image"></div>
+        <div class="sidebar__image">
+          <div class="sidebar__add--content">${addTextValue}</div>
+        </div>
       </div>
     `;
 
@@ -92,12 +89,92 @@ $(document).ready(function() {
 
     $('.add-sidebar__form').fadeOut('slow');
 
-    idCount++;
+    $('.add-sidebar__form textarea').val('');
   });
 
-  $(document).on('click', '.sidebar__action--edit', function(e) {
+  // delete sidebar-add
+  $('body').on('click', '.sidebar__action--delete', function(e) {
     e.preventDefault();
-    $('.add-sidebar__form').fadeIn('slow');
+    $(this)
+      .parents('.add-sidebar__block')
+      .remove();
+  });
+
+  // edit sidebar-add
+  $('body').on('click', '.sidebar__action--edit', function() {
+    var sidebarblockData = $(this)
+      .parents('.add-sidebar__block')
+      .attr('data-name');
+    console.log(sidebarblockData);
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__add--content')
+      .html(`<textarea name="edit_text">${sidebarblockData}</textarea>`);
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action').prepend(`
+      <a class="sidebar__action--update" href="#">Save</a>
+      <a class="sidebar__action--cancel" href="#">Cancel</a>
+    `);
+
+    $(this).hide();
+  });
+
+  // sidebar-cancel
+  $('body').on('click', '.sidebar__action--cancel', function() {
+    var remainingSidebarData = $(this)
+      .parents('.add-sidebar__block')
+      .attr('data-name');
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__add--content')
+      .html(remainingSidebarData);
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--edit')
+      .show();
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--update')
+      .remove();
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--cancel')
+      .remove();
+  });
+
+  // update sidebar-update
+  $('body').on('click', '.sidebar__action--update', function() {
+    var updatedSidebarData = $(this)
+      .parents('.add-sidebar__block')
+      .find('textarea')
+      .val();
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__add--content')
+      .html(updatedSidebarData);
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .attr('data-name', updatedSidebarData);
+
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--edit')
+      .show();
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--cancel')
+      .remove();
+    $(this)
+      .parents('.add-sidebar__block')
+      .find('.sidebar__action--update')
+      .remove();
   });
 });
 

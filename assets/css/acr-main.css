@@ -2,9 +2,9 @@
   --color-main: #eee;
   --color-accent: #f9dc3a;
   --color-text: #263238;
-  --padding-vertical: 0.3rem;
-  --padding-vertical-bigscreen: 0.5rem;
-  --padding-horizontal-bigscreen: 5rem;
+  --padding-vertical: 0.45rem;
+  --padding-vertical-bigscreen: 0.35rem;
+  --padding-horizontal-bigscreen: 0.50rem;
   --padding-horizontal-mediumscreen: 2.5rem;
   --padding-horizontal-smallscreen: 1.5rem;
   --font: 'IBM Plex Sans Condensed', sans-serif;
@@ -31,6 +31,7 @@ body {
   line-height: 1.5;
   color: var(--color-text);
   background: linear-gradient(to right, #fff, #f9dc3a50);
+  font-size: 14px;
 }
 
 a {
@@ -91,23 +92,25 @@ ul {
     => section-header
 -----------------------------*/
 .section__header {
+  background-color: #ffffff90;
   display: flex;
   align-items: center;
   margin-bottom: 0.25rem;
+  border-top: 1px solid var(--color-accent);
   border-bottom: 1px solid var(--color-accent);
 }
 
 .section__header svg {
-  height: 22px;
-  width: 22px;
+  height: 16px;
+  width: 16px;
   margin-right: 0.5rem;
   fill: var(--color-accent);
 }
 
 .section__header--title {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 15px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 14px;
   letter-spacing: 0.5px;
   color: var(--color-text);
 }
@@ -375,7 +378,7 @@ ul {
   margin: 0 2.2em;
   line-height: 1.3em;
   color: var(--color-text);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -649,9 +652,9 @@ ul {
 .all-rewards .loadmore button {
   background-color: var(--color-text);
   color: var(--color-accent);
-  padding: 12px 40px;
+  padding: 8px 30px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -662,7 +665,7 @@ ul {
 }
 
 .masonry-not-columns {
-  border: 2px solid var(--color-main);
+  background: #ffffff90;
 }
 
 .masonry-not-columns img {
@@ -691,7 +694,7 @@ ul {
 .masonry-not-columns a {
   display: inline-block;
   height: 160px;
-  width: 240px;
+  width: 241px;
   padding: 1px;
 }
 
@@ -963,7 +966,7 @@ ul {
 -----------------------------*/
 .about-us__content p,
 .hw__content p {
-  font-size: 14.5px;
+  font-size: 13px;
   line-height: 1.5;
   text-align: justify;
 }
@@ -1035,9 +1038,9 @@ ul {
 .field-submit input.submit-button {
   background-color: var(--color-text);
   color: var(--color-accent);
-  padding: 10px 30px;
+  padding: 8px 30px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
   letter-spacing: 0.5px;
   cursor: pointer;

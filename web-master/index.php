@@ -12,7 +12,7 @@
         session_destroy();
         unset($_SESSION['email']);
         header("location: login.php");
-    }
+    }   
   
 ?>
 <!DOCTYPE html>
@@ -32,12 +32,6 @@
 </head>
 
 <body>
-    <!-- <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div> -->
-    
     <header class="header section__primary">
         <div class="section__fluid">
             <div class="header__content">

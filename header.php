@@ -16,11 +16,11 @@
 
 <body>
     <?php include('g-anlaytics.php'); ?>
-    <!-- <div id="loader-wrapper">
+    <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div> -->
+    </div>
     
     <header class="header section__primary">
         <div class="section__fluid">

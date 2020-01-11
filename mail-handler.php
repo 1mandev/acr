@@ -1,7 +1,8 @@
 <?php 
 session_start();
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['send-mail'])) {
+
     $to = 'contact@actualcashrewards.com';
     $from = $_POST['email'];
     $name = $_POST['name'];
@@ -12,6 +13,17 @@ if (isset($_POST['submit'])) {
 
     $reward = $_POST['reward-checkbox'];
     $featured_reward = $_POST['featured-reward-checkbox'];
+
+    $image = $_FILES['contact-img']['name'];
+    $targetFilePath = "contact/".basename($image);
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+    $allowTypes = array('jpg','png','jpeg','gif');
+
+    $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+    if (in_array($fileType, $allowTypes)) {
+        move_uploaded_file($_FILES["contact-img"]["tmp_name"], $_SERVER["DOCUMENT_ROOT"]."/".$targetFilePath);
+    }
 
     $message = '<html><body>';
     $message .='<table>';
@@ -25,6 +37,9 @@ if (isset($_POST['submit'])) {
     if ($featured_reward == "on") $message .='<tr><td>Featured Reward?: </td><td>Yes</td></tr>';
     $message .='</table>';
     $message .='</body></html>';
+    if ($image) $message .='<tr><td>Images?: </td><td>
+    <img src="'. $current_url.$_SERVER["DOCUMENT_ROOT"]."/".$targetFilePath.'"
+    </td></tr>';
 
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

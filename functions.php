@@ -57,7 +57,7 @@ function createThumbnail($filename, $path_to_image_directory, $path_to_thumbs_di
     }
 }
 
-function generateThubmnails($dir, $thumb_dir, $thumb_height = 180){
+function generateThubmnails($dir, $thumb_dir, $thumb_height = 250){
     $dir_full_images = GetImagesArray($dir);
     foreach ($dir_full_images as $image) {
         if (preg_match('/[.](jpg)|(gif)|(png)|(jpeg)$/', $image)) {
@@ -82,3 +82,13 @@ foreach($allSubDirs as $subdir){
         } 
     }
 }
+
+function array_random($arr, $num) {
+    $r = array();
+    for ($i = 0; $i < $num; $i++) {
+        $r[] = $arr[$i];
+        shuffle($r);
+    }
+    return $r;
+}
+

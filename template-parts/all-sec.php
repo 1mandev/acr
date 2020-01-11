@@ -11,7 +11,9 @@
         foreach($allSubDirs as $subdir):
             if($subdir == "all"):
                 $all_thumbs = GetImagesArray("images/".$subdir."/"."thumb/");
-                    foreach($all_thumbs as $image):
+                $arrayLen = count($all_thumbs);
+                $r_all_thumbs = array_random($all_thumbs,$arrayLen);
+                    foreach($r_all_thumbs as $image):
                         $full_img = "images/".$subdir."/"."full/".$image;
                         $thumb_img = "images/".$subdir."/"."thumb/".$image;
         ?>

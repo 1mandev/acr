@@ -73,7 +73,7 @@
                     <?php
                         unset($_SESSION['mailsent']);
                     } ?>
-                    <form method="post" action="mail-handler.php">
+                    <form method="post" action="mail-handler.php" enctype="multipart/form-data">
                         <div class="checkbox">
                             <input type="checkbox" id="reward-checkbox" name="reward-checkbox">
                             <label for="reward-checkbox">
@@ -110,15 +110,15 @@
                             <input type="text" name="subject" id="Subject" required />
                         </div>
                         <div class="field">
-                            <label for="image-file">File:</label>
-                            <input type="file" name="image-file" id="image-file" />
+                            <label for="contact-img">File:</label>
+                            <input type="file" name="contact-img" id="contact-img" />
                         </div>
                         <div class="field">
                             <label for="Message">Message:</label>
                             <textarea name="message" rows="10" cols="20" id="Message" required></textarea>
                         </div>
                         <div class="field-submit">
-                            <input type="submit" name="submit" value="Submit" class="submit-button" />
+                            <input type="submit" name="send-mail" value="Submit" class="submit-button" />
                         </div>
                     </form>
 

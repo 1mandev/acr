@@ -84,7 +84,7 @@ $(document).ready(function() {
 
     $(elementToPrepend)
       .hide()
-      .prependTo('.content__sidebar')
+      .appendTo('.content__sidebar')
       .fadeIn('slow');
 
     $('.add-sidebar__form').fadeOut('slow');

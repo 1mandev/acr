@@ -83,5 +83,36 @@
 					</div>
 				</div>
             </section>
+    </main>
+    <aside class="content__sidebar section__primary">
+        <?php $results = mysqli_query($db, "SELECT * FROM sidebarads"); 
+            while($row = mysqli_fetch_array($results)):
+                if($row):?>
+                <div class="add-sidebar__block" data-name="<?php //echo $row['script']?>">
+                    <div class="sidebar__action">
+                        <a class="sidebar__action--edit" href="#">Edit</a>
+                        <a class="sidebar__action--delete" href="#">Delete</a>
+                    </div>
+                    <div class="sidebar__image">
+                        <div class="sidebar__add--content">
+                            <?php echo $row['script']?>
+                        </div>
+                    </div>
+                 </div>
+                <?php else: ?>
+
+                
+            <?php endif; endwhile;?>
+            
+            <div class="add-sidebar__button">
+                <button>+Add</button>
+            </div>
+            <form class="add-sidebar__form" action="">
+                <textarea name="add-sidebar-script" id="add-sidebar-script"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+
+            
+    </aside>
 	<?php endif; ?>
 <?php include("../footer.php"); ?>

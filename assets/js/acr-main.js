@@ -95,8 +95,8 @@ $(document).ready(function() {
     var elementToPrepend = `
       <div class="add-sidebar__block">
         <div class="sidebar__action">
-          <a class="sidebar__action--edit" href="">Edit</a>
-          <a class="sidebar__action--delete" href="">Delete</a>
+          <a class="sidebar__action--edit" href="#">Edit</a>
+          <a class="sidebar__action--delete" href="#">Delete</a>
         </div>
         <div class="sidebar__image"></div>
       </div>
@@ -108,6 +108,16 @@ $(document).ready(function() {
       .fadeIn('slow');
 
     $('.add-sidebar__form').fadeOut('slow');
+  });
+
+  $(document).on('click', '.sidebar__action--edit', function(e) {
+    e.preventDefault();
+    $('.add-sidebar__form').fadeIn('slow');
+  });
+
+  $(document).on('click', '.sidebar__action--delete', function(e) {
+    e.preventDefault();
+    $('.add-sidebar__block').remove();
   });
 });
 

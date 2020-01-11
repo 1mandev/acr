@@ -108,9 +108,9 @@ ul {
 }
 
 .section__header--title {
-  font-weight: bolder;
+  font-weight: bold;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   color: var(--color-text);
 }

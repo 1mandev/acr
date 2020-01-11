@@ -19,7 +19,7 @@ if (isset($_POST['send-mail'])) {
     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     $allowTypes = array('jpg','png','jpeg','gif');
 
-    $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $site_url = "http://$_SERVER[HTTP_HOST]";
 
     if (in_array($fileType, $allowTypes)) {
         move_uploaded_file($_FILES["contact-img"]["tmp_name"], $_SERVER["DOCUMENT_ROOT"]."/".$targetFilePath);
@@ -38,7 +38,7 @@ if (isset($_POST['send-mail'])) {
     $message .='</table>';
     $message .='</body></html>';
     if ($image) $message .='<tr><td>Images?: </td><td>
-    <img src="'. $current_url.$_SERVER["DOCUMENT_ROOT"]."/".$targetFilePath.'"
+    <img src="'. $site_url."/".$targetFilePath.'"
     </td></tr>';
 
     $headers = "MIME-Version: 1.0" . "\r\n";

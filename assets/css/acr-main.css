@@ -110,7 +110,7 @@ ul {
 .section__header--title {
   font-weight: bold;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   color: var(--color-text);
 }

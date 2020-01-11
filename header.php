@@ -1,7 +1,3 @@
-<?php 
-    require_once 'functions.php'; 
-    require_once 'server-config.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,44 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ActualCashRewards</title>
-    <link rel="shortcut icon" href="assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendor/slick/slick.css">
-    <link rel="stylesheet" href="assets/vendor/slick/slick-theme.css">
-    <link rel="stylesheet" href="assets/vendor/light/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/acr-main.css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/vendor/slick/slick.css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/vendor/light/baguetteBox.min.css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/css/acr-main.css">
 </head>
 
 <body>
     <?php include('g-anlaytics.php'); ?>
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div> -->
     
     <header class="header section__primary">
         <div class="section__fluid">
             <div class="header__content">
                 <div class="logo">
                     <a href="/">
-                        <img class="logo-icon" src="assets/logo/logo-1d.jpg">
+                        <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo-1d.jpg">
                     </a>
                 </div>
-                <!-- Featured Banner -->
-                <div class="banner">
-                    <?php $results = mysqli_query($db, "SELECT * FROM ads");
-                        while ($row = mysqli_fetch_array($results)):
-                            if ($row['name']== 'banner'):
-                            ?>
-
-                    <a href="<?php echo $row['url'] ?>">
-                        <img src="<?php echo "ads/".$row['ads_img'] ?>" alt="featured__image">
-                    </a>
-
-                    <?php endif; break; endwhile;?>
-
-                </div>
+                <?php include('banner.php') ?>
             </div>
         </div>
     </header>

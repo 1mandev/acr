@@ -1,4 +1,4 @@
-<?php include('mail-handler.php'); include('header.php'); ?>
+<?php include('mail-handler.php'); require_once $_SERVER['DOCUMENT_ROOT'].'/server-config.php'; include('header.php'); ?>
 
 <!-- about us -->
 <section class="about-us section__primary">

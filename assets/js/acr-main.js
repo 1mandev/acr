@@ -12,32 +12,10 @@ $(document).ready(function() {
     => bannner-add
 -----------------------------*/
 $(document).ready(function() {
-  $('.add-banner__form').hide();
-  $('.add-banner__block').hide();
+  $('#banner-add__form').hide();
   $('.add-banner__button button').click(function() {
-    $('.add-banner__form').fadeIn('slow');
+    $('#banner-add__form').fadeIn('slow');
     $('.add-banner__button button').fadeOut('slow');
-  });
-
-  $('.add-banner__form input[type="submit"]').click(function(e) {
-    e.preventDefault();
-
-    $('.add-banner__block').fadeIn('slow');
-    $('.add-banner__form').fadeOut('slow');
-  });
-
-  $('.banner__action--edit').click(function(e) {
-    e.preventDefault();
-
-    $('.add-banner__form').fadeIn('slow');
-    $('.add-banner__block').fadeOut('slow');
-  });
-
-  $('.banner__action--delete').click(function(e) {
-    e.preventDefault();
-
-    $('.add-banner__button button').fadeIn('slow');
-    $('.add-banner__block').fadeOut('slow');
   });
 });
 

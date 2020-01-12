@@ -82,10 +82,7 @@ $(document).ready(function() {
       </div>
     `;
 
-    $(elementToPrepend)
-      .hide()
-      .prependTo('.content__sidebar')
-      .fadeIn('slow');
+    $('.append__add--elements').append(elementToPrepend);
 
     $('.add-sidebar__form').fadeOut('slow');
 
@@ -101,7 +98,8 @@ $(document).ready(function() {
   });
 
   // edit sidebar-add
-  $('body').on('click', '.sidebar__action--edit', function() {
+  $('body').on('click', '.sidebar__action--edit', function(e) {
+    e.preventDefault();
     var sidebarblockData = $(this)
       .parents('.add-sidebar__block')
       .attr('data-name');
@@ -123,7 +121,8 @@ $(document).ready(function() {
   });
 
   // sidebar-cancel
-  $('body').on('click', '.sidebar__action--cancel', function() {
+  $('body').on('click', '.sidebar__action--cancel', function(e) {
+    e.preventDefault();
     var remainingSidebarData = $(this)
       .parents('.add-sidebar__block')
       .attr('data-name');
@@ -148,7 +147,8 @@ $(document).ready(function() {
   });
 
   // update sidebar-update
-  $('body').on('click', '.sidebar__action--update', function() {
+  $('body').on('click', '.sidebar__action--update', function(e) {
+    e.preventDefault();
     var updatedSidebarData = $(this)
       .parents('.add-sidebar__block')
       .find('textarea')

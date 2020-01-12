@@ -3,10 +3,6 @@
     <footer class="footer section__primary">
         <div class="footer__content">
             <div class="footer__head">
-                <!-- <svg>
-                    <use xlink:href="/logo/icon.svg">
-                    </use>
-                </svg> -->
                 <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo-1d.jpg">
             </div>
             <ul class="footer__social">

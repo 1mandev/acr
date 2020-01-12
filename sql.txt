@@ -17,3 +17,8 @@ CREATE TABLE `bannerads` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `script` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sidebarads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `script` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

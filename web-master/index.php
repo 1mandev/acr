@@ -90,7 +90,8 @@
 				<div class="control-home">
 					<div class="control-home__info">
 						<h2>Ads Management</h2>
-						<p>User: <strong><?php echo $_SESSION['email']; ?></strong></p>
+                        <p>User: <strong><?php echo $_SESSION['email']; ?></strong></p>
+                        <div>(Go to <a href="../index.php">homepage</a> to see the actual changes.)</div>
 					</div>
 					<div class="control-home__logout">
 						<a href="index.php?logout='1'" class="btn">Logout</a>

@@ -9,7 +9,7 @@
 <body>
   <div class="content-box">
   <div class="header">
-  	<h2>Register</h2>
+  	<h2>ACR Control Panel</h2>
   </div>
 	
   <form method="post" action="register.php">

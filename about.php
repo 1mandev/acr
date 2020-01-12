@@ -110,7 +110,7 @@
                             <input type="text" name="subject" id="Subject" required />
                         </div>
                         <div class="field">
-                            <label for="contact-img">File:</label>
+                            <label for="contact-img">Upload Image:</label>
                             <input type="file" name="contact-img" id="contact-img" />
                         </div>
                         <div class="field">

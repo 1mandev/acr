@@ -1,11 +1,14 @@
 </main>
-<aside class="content__sidebar section__primary">
-    <?php $results = mysqli_query($db, "SELECT * FROM ads");
+<aside class="home-aside content__sidebar section__primary">
+    <?php $results = mysqli_query($db, "SELECT * FROM sidebarads");
         while ($row = mysqli_fetch_array($results)):
-            if ($row['name']== 'sidebar'):
         ?>
-    <div class="add__box">
-        <a href="<?php echo $row['url'] ?>"><img src="<?php echo "ads/".$row['ads_img'] ?>" alt="featured__image"></a>
-    </div>
-    <?php endif; endwhile;?>
+            <div class="append__add--elements">
+                <div class="sidebar__image">
+                    <div class="sidebar__add--content">
+                        <?php echo $row['script']?>
+                    </div>
+                </div>
+            </div>
+    <?php endwhile;?>
 </aside>

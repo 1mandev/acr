@@ -48,16 +48,23 @@ function createThumbnail($filename, $path_to_image_directory, $path_to_thumbs_di
     
         $ox = imagesx($im);
         $oy = imagesy($im);
-        $nx =  floor($ox * ($final_height_of_image / $oy)); //150
+        $nx =  floor($ox * ($final_height_of_image / $oy)); //200
         $ny = $final_height_of_image;
-        $nm = imagecreatetruecolor($nx, $ny);
-    
+
+        $box_blur = array([1, 1, 1], [1, 1, 1], [1, 1, 1]);
+        imageconvolution($im, $box_blur, 9, 0);
+
+        $nm = imagecreatetruecolor($nx, $ny);        
+        imageAlphaBlending($nm, false);
+        imageSaveAlpha($nm, true);
+        imageantialias($nm, true);
+
         imagecopyresized($nm, $im, 0, 0, 0, 0, $nx, $ny, $ox, $oy);
         imagejpeg($nm, $path_to_thumbs_directory . $filename, 100);
     }
 }
 
-function generateThubmnails($dir, $thumb_dir, $thumb_height = 250){
+function generateThubmnails($dir, $thumb_dir, $thumb_height = 200){
     $dir_full_images = GetImagesArray($dir);
     foreach ($dir_full_images as $image) {
         if (preg_match('/[.](jpg)|(gif)|(png)|(jpeg)$/', $image)) {

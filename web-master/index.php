@@ -13,6 +13,19 @@
         unset($_SESSION['email']);
         header("location: login.php");
     }   
+
+    if (isset($_GET['edit-sidebar'])) {
+		$id = $_GET['edit-sidebar'];
+		$update = true;
+		$record = mysqli_query($db, "SELECT * FROM sidebarads WHERE id=$id");
+
+		if ($row = mysqli_fetch_array($record)) {
+            $sidebar_script=$row['script'];
+        }
+
+        $_SESSION['sidebar_edit'] = "edit";
+        
+	}
   
 ?>
 <!DOCTYPE html>
@@ -47,7 +60,7 @@
                             if($row = mysqli_fetch_array($results)):?>
                                 <div class="add-banner__block">
                                     <div class="banner__action">
-                                        <a class="banner__action--delete" href="ads-handler.php?del=<?php echo $row['id']; ?>">Delete</a>
+                                        <a class="banner__action--delete" href="ads-handler.php?del-banner=<?php echo $row['id']; ?>">Delete</a>
                                     </div>
                                     <div class="banner__image">
                                         <?php echo $row['script'];?>
@@ -85,34 +98,47 @@
             </section>
     </main>
     <aside class="content__sidebar section__primary">
+        
+        <div class="append__add--elements">
+
+        
         <?php $results = mysqli_query($db, "SELECT * FROM sidebarads"); 
             while($row = mysqli_fetch_array($results)):
                 if($row):?>
-                <div class="add-sidebar__block" data-name="<?php //echo $row['script']?>">
+                <div class="add-sidebar__block">
                     <div class="sidebar__action">
-                        <a class="sidebar__action--edit" href="#">Edit</a>
-                        <a class="sidebar__action--delete" href="#">Delete</a>
+                        <a class="sidebar__action--edit" href="index.php?edit-sidebar=<?php echo $row['id']; ?>">Edit</a>
+                        <a class="sidebar__action--delete" href="ads-handler.php?del-sidebar=<?php echo $row['id']; ?>">Delete</a>
                     </div>
+                    <?php if(isset($_SESSION['sidebar_edit'])):?>
+                    <form class="edit-sidebar__form" action="ads-handler.php" method="post">
+                    <textarea name="add-sidebar-script" id="add-sidebar-script"><?php echo $sidebar_script ?></textarea>
+                        <input name="save-sidebar_ads" type="submit" value="Submit">
+                    </form>
+                <?php unset($_SESSION['sidebar_edit']); else: ?>
+
                     <div class="sidebar__image">
                         <div class="sidebar__add--content">
                             <?php echo $row['script']?>
                         </div>
                     </div>
                  </div>
-                <?php else: ?>
+                <?php endif; endif; endwhile;?>
+            </div>
 
-                
-            <?php endif; endwhile;?>
             
+            <form class="add-sidebar__form" action="ads-handler.php" method="post">
+                <textarea name="add-sidebar-script" id="add-sidebar-script"><?php echo $sidebar_script ?></textarea>
+                <input name="save-sidebar_ads" type="submit" value="Submit">
+            </form>
+
             <div class="add-sidebar__button">
                 <button>+Add</button>
             </div>
-            <form class="add-sidebar__form" action="">
-                <textarea name="add-sidebar-script" id="add-sidebar-script"></textarea>
-                <input type="submit" value="Submit">
-            </form>
 
             
     </aside>
-	<?php endif; ?>
+    <?php endif; ?>
+    
+
 <?php include("../footer.php"); ?>

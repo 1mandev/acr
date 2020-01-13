@@ -169,7 +169,6 @@ ul {
 .banner .banner__image {
   width: 768px;
   height: 90px;
-  background-color: var(--color-main);
 }
 
 .banner__action {
@@ -242,7 +241,7 @@ ul {
   flex-shrink: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .add-banner__button button {
     height: 90px;
     width: 650px;
@@ -260,20 +259,65 @@ ul {
   }
 }
 
-@media (max-width: 885px) {
+@media (max-width: 1050px) {
   .add-banner__button button {
     height: 90px;
-    width: 576px;
+    width: 550px;
     font-size: 1.15rem;
   }
 
   .add-banner__form textarea {
     height: 90px;
-    width: 576px;
+    width: 550px;
   }
 
   .banner .banner__image {
-    width: 576px;
+    width: 550px;
+    height: 90px;
+  }
+
+}
+
+@media (max-width: 920px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 500px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 500px;
+  }
+
+  .banner .banner__image {
+    width: 500px;
+    height: 90px;
+  }
+
+  .add-banner__form input[type='submit'],
+  .add-banner__form input[type='button'] {
+    width: 17%;
+    flex-shrink: 0;
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 860px) {
+  .add-banner__button button {
+    height: 90px;
+    width: 450px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 450px;
+  }
+
+  .banner .banner__image {
+    width: 450px;
     height: 90px;
   }
 }
@@ -292,6 +336,22 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .add-banner__button button {
+    height: 90px;
+    width: 550px;
+    font-size: 1.15rem;
+  }
+
+  .add-banner__form textarea {
+    height: 90px;
+    width: 550px;
+  }
+
+  .banner .banner__image {
+    width: 550px;
+    height: 90px;
   }
 }
 
@@ -853,16 +913,14 @@ ul {
 }
 
 .sidebar__image {
-  width: 200px!important;
+  width: 250px!important;
   height: auto;
   text-align: center;
 }
 
 .sidebar__image .sidebar__add--content {
-  /* height: 100%; */
-  min-width: 200px;
-  height: calc(100%-6px);
-  background-color: #f9dc3a30;
+  height: 100%;
+  width: 100%;
   border: 1px solid var(--color-main);
 }
 

@@ -22,21 +22,22 @@
         <div class="loader-section section-right"></div>
     </div>
     
-    <header class="header section__primary">
-        <div class="section__fluid">
-            <div class="header__content">
-                <div class="logo">
-                    <a href="/">
-                        <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo.jpg">
-                    </a>
-                </div>
-                <?php include('banner.php') ?>
-            </div>
-        </div>
-    </header>
+    
 
     <div class="content section__fluid">
         <main class="content__main">
+            <header class="header section__primary">
+     
+                    <div class="header__content">
+                        <div class="logo">
+                            <a href="/">
+                                <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo.jpg">
+                            </a>
+                        </div>
+                        <?php include('banner.php') ?>
+                    </div>
+        
+            </header>
             <section class="nav section__primary">
                 <div class="menu-wrapper">
                     <a href="#menu" class="menu-link"> Menu</a>

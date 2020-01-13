@@ -38,7 +38,7 @@ if (isset($_POST['send-mail'])) {
     $message .='</table>';
     $message .='</body></html>';
     if ($image) $message .='<tr><td>Images?: </td><td>
-    <img src="'. $site_url."/".$targetFilePath.'"
+    <img style="width: 80%; margin: auto;" src="'. $site_url."/".$targetFilePath.'"
     </td></tr>';
 
     $headers = "MIME-Version: 1.0" . "\r\n";

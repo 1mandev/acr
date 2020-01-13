@@ -4,7 +4,6 @@
         if ($row = mysqli_fetch_array($results)):
     ?>
         <div class="add-banner__block">
-
             <div class="banner__image">
                 <?php echo $row['script'];?>
             </div>

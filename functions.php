@@ -98,4 +98,3 @@ function array_random($arr, $num) {
     }
     return $r;
 }
-

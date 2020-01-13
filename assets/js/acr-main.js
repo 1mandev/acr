@@ -5,7 +5,7 @@ $(document).ready(function() {
   // Fakes the loading setting a timeout
   setTimeout(function() {
     $('body').addClass('loaded');
-  }, 100);
+  }, 500);
 });
 
 /*---------------------------
@@ -123,7 +123,7 @@ $(document).ready(function() {
     rows: 2,
     slidesPerRow: 4,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 992,

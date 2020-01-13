@@ -229,10 +229,11 @@ ul {
   cursor: pointer;
 }
 
-.banner a img {
+.banner .banner__image img,
+.sidebar__image .sidebar__add--content img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

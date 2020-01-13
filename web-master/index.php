@@ -52,7 +52,7 @@
             <div class="header__content">
                 <div class="logo">
                     <a href="/">
-                        <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo-1d.jpg">
+                        <img class="logo-icon" src="<?php $_SERVER['DOCUMENT_ROOT'];?>/assets/logo/logo.jpg">
                     </a>
                 </div>
 				

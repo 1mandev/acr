@@ -9,7 +9,7 @@ if (isset($_POST['send-mail'])) {
     $phone = $_POST['phone'];
     $website = $_POST['website'];
     $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $msg = $_POST['message'];
 
     $reward = $_POST['reward-checkbox'];
     $featured_reward = $_POST['featured-reward-checkbox'];
@@ -32,7 +32,7 @@ if (isset($_POST['send-mail'])) {
     $message .='<tr><td>Phone:</td><td>'. $phone .'</td></tr>';
     $message .='<tr><td>Website:</td><td>'. $website .'</td></tr>';
     $message .='<tr><td>Subject:</td><td>'. $subject .'</td></tr>';
-    $message .='<tr><td>Message:</td><td>'. $message .'</td></tr>';
+    $message .='<tr><td>Message:</td><td>'. $msg .'</td></tr>';
     if ($reward == "on") $message .='<tr><td>Reward?: </td><td>Yes</td></tr>';
     if ($featured_reward == "on") $message .='<tr><td>Featured Reward?: </td><td>Yes</td></tr>';
     $message .='</table>';
